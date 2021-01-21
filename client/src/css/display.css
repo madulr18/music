@@ -1,0 +1,26 @@
+.display {
+    position: relative;
+    text-align: center;
+  }
+  
+  .staff {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #bass {
+    position: relative;
+    z-index: 2;
+    top: -15px;
+    margin: 50px 20px 50px 20px;
+  }
+
+  #treble {
+    position: relative;
+    z-index: 2;
+    margin: 0px -30px 0px -30px;
+  }
+
+  .clef {
+    position: relative;
+  }
