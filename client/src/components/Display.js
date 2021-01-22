@@ -30,6 +30,7 @@ export class Display extends Component {
         //images
         var clef_img_var = DisplayLogic.getClef(parentState.display.clef)
         var keySigImg = DisplayLogic.keySigImg(parentState.display.keyType)
+        //staff probably does not need to reload FIX
         var music_staff_img_var = require('./../images/music_staff.jpg')
         var whole_note_var = require('./../images/whole_note.png')
 
@@ -70,6 +71,7 @@ export class Display extends Component {
 
     //clean up
     hasDiffState(prevState, newState) {
+        console.log("YOOOOO")
         console.log(prevState)
         console.log(newState)
         if (newState.display === '') {
@@ -94,16 +96,24 @@ export class Display extends Component {
         return (
             <div className='display'>
 
-                <div style={{position: 'relative', zIndex: '1'}}>
+                <div style={{position: 'static', zIndex: '1', borderColor: 'blue', borderStyle: 'solid'}}>
                     <img src={this.state.music_staff_img} className="staff" alt='' />
                 </div>
-                <div style={{ position: 'relative', top: '-240px', zIndex: '2' }}>
-                    
-                        <img src={this.state.clef_img} className="clef" id={this.props.parent.state.display.clef} alt='' />
-                   
+                <div style={{ position: 'absolute', top: '0px', zIndex: '2' , borderStyle: 'dashed', borderColor: 'green'}}>
+                    <div className="clef">
+                        <img src={this.state.clef_img} id={this.props.parent.state.display.clef} alt='' />
+                        {/*<p>RIGHT</p>*/}
+                    </div>
 
-                    {this.state.keySig}
-                    <img src={this.state.whole_note_img} style={this.state.note_disp} className="note" alt='' />
+                    <div style={{ position: 'relative', top: '193px', zIndex: '2', borderStyle: 'solid', float: 'left' }}>
+                        {/*<p>HEY</p>*/}
+                        {this.state.keySig}
+                    </div>
+
+                    <div style={{position: 'relative', top: '193px', borderStyle: 'solid', borderColor: 'yellow', float: 'right'}}>
+                        <img src={this.state.whole_note_img} style={this.state.note_disp} className="note" alt='' />
+                        {/*<p>MOM</p>*/}
+                    </div>
                 </div>
 
 

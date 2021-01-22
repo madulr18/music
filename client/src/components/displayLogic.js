@@ -118,7 +118,7 @@ var displayLogic = {
             zIndex: 2,
         }
 
-        var vert_incr = 14
+        var vert_incr = 13.6
 
         var start_index
         var clef_shift

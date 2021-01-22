@@ -1,5 +1,7 @@
 .display {
-    position: relative;
+    position: static;
+    border: solid;
+    border-color: red;
     text-align: center;
   }
   
@@ -11,16 +13,23 @@
   #bass {
     position: relative;
     z-index: 2;
-    top: -15px;
+    top: 25px;
     margin: 50px 20px 50px 20px;
   }
 
   #treble {
     position: relative;
+    float: left;
+    border-style: solid;
     z-index: 2;
+    top: 34px;
     margin: 0px -30px 0px -30px;
   }
 
   .clef {
-    position: relative;
+    position: static;
+    z-index: 4;
+    border-style: dashed;
+    border-color: orange;
+    float: left;
   }
